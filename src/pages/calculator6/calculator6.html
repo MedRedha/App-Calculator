@@ -1,0 +1,84 @@
+<!--
+  Generated template for the Calculator6Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>calculator6</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="center-vertical">
+		<div class="list list-inset">
+			<label class="item item-input">
+				<ion-input type="text" placeholder="Ergebnis..." name="display" [(ngModel)]="expression"></ion-input>
+			</label>
+		</div>
+		<div class="input">
+			<ion-input type="text" placeholder="0" name="display" [(ngModel)]="result"></ion-input>
+		</div>
+
+			<div style="margin-top: 50px">
+			  <div class="row">
+				  <div class="col col-20 col-offset-10">
+					  <button class="button button-light button-stretch" (click)="add(1)">1</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add(2)">2</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add(3)">3</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add('-')">-</button>
+				  </div>
+			  </div>
+			  <div class="row">
+				  <div class="col col-20 col-offset-10">
+					  <button class="button button-light button-stretch" (click)="add(4)">4</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add(5)">5</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add(6)">6</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add('+')">+</button>
+				  </div>
+			  </div>
+			  <div class="row">
+				  <div class="col col-20 col-offset-10">
+					  <button class="button button-light button-stretch" (click)="add(7)">7</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add(8)">8</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add(9)">9</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add('/')">/</button>
+				  </div>
+			  </div>
+			  <div class="row">
+				  <div class="col col-20 col-offset-10">
+					  <button class="button button-light button-stretch" (click)="clear()">CLEAR</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add(0)">0</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="calculate(expression)">=</button>
+				  </div>
+				  <div class="col col-20">
+					  <button class="button button-light button-stretch" (click)="add('*')">*</button>
+				  </div>
+			  </div>
+		  </div>
+</ion-content>
