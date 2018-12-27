@@ -6,3 +6,8 @@ This means:
 - working with css and grid to setup a nice display of a calculate
 - working with typescript to handle the evaluation 
 
+
+Basic Calculator | Postfix Calculator | Scientifiy Calculator
+---------------- | ------------------ | ---------------------
+![Basic Calculator](images/basic.png) | ![Calculator with Postfix](images/postfix.png) | ![Scientific Calculator](images/scientific.png)
+
