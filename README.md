@@ -9,5 +9,5 @@ This means:
 
 Basic Calculator | Postfix Calculator | Scientifiy Calculator
 ---------------- | ------------------ | ---------------------
-![Basic Calculator](images/basic.png) | ![Calculator with Postfix](images/postfix.png) | ![Scientific Calculator](imgages/scientific.png)
+![Basic Calculator](images/basic.png) | ![Calculator with Postfix](images/postfix.png) | ![Scientific Calculator](images/scientific.png)
 
