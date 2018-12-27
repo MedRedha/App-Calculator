@@ -32,7 +32,7 @@ export class CalculatorScientificPage implements OnInit {
         }
     };
 
-    expression: any;
+    expression: any= ""
     result: any;
 
     constructor() { }

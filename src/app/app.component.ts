@@ -10,11 +10,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Rechner 1', url: '/calculator1', icon: 'list' },
-    { title: 'Rechner 2', url: '/calculator2', icon: 'list' },
-    { title: 'Rechner 5', url: '/calculator5', icon: 'list' },
-    { title: 'Rechner Postfix', url: '/calculator-postfix', icon: 'calc' },
-    { title: 'Rechner Wissenschaftlich', url: '/calculator-scientific', icon: 'list' }
+    { title: 'Einfacher Rechner', url: '/calculator-basic', icon: 'create' },
+    { title: 'Postfix', url: '/calculator-postfix', icon: 'grid' },
+    { title: 'Wissenschaftlich', url: '/calculator-scientific', icon: 'grid' }
   ];
 
   constructor(

@@ -14,8 +14,8 @@
         background-color: #f5f5f5;
     }
     .calculator {
-        width: 350px;
-        height: 400px;
+		margin: 0px;
+		widows: 100px;
         border-radius: 10px;
         box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.5);
         .header {
@@ -80,7 +80,7 @@
                         cursor: pointer;
                     }
                 }
-                .symbol {
+                .symbol, .symbol2col {
                     width: 25%;
                     background-color: #ffffff;
                     font-size: 34px;
@@ -93,14 +93,14 @@
                         align-items: center;
                         user-select: none;
                         cursor: pointer;
-                    }
+					}
                     &.action {
                         background: linear-gradient(60deg, #ff0300, #ffa100);
                         border-radius: 0 0 10px 0;
                         color: #ffffff;
                         box-shadow: 0 25px 60px -10px rgba(255, 10, 0, 0.5);
                     }
-                }
+				}
             }
         }
     }

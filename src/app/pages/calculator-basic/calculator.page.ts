@@ -20,6 +20,12 @@ export class Calculator1Page implements OnInit {
 			this.result = "";
 		} else if (btn == "=") {
 			this.result = eval(this.result);
+		} else if (btn == "squareroot") {
+			this.result = Math.sqrt(eval(this.result)) + "";
+		} else if (btn == "square") {
+			this.result = eval("(" + this.result + ") * ( " + this.result + ")");
+		} else if (btn == "reciproc") {
+			this.result = eval(1 + "/ (" + this.result + ")");
 		} else {
 			this.result += btn;
 		}
