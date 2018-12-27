@@ -11,3 +11,8 @@ Basic Calculator | Postfix Calculator | Scientific
 ---------------- | ------------------ | ---------------------
 ![Basic Calculator](images/basic.png) | ![Calculator with Postfix](images/postfix.png) | ![Scientific Calculator](images/scientific.png)
 
+
+Working with the math.js module for better precision
+
+    npm install mathjs --save
+    npm install @types/mathjs --save-dev

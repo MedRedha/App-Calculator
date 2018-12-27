@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as math from 'mathjs'
+
 @Component({
   selector: 'app-calculator-scientific',
   templateUrl: './calculator-scientific.page.html',
@@ -100,6 +102,10 @@ export class CalculatorScientificPage implements OnInit {
         return this.outputQueue;
     }
 
+	convertToFloat(value): number {
+		return parseFloat(value);
+	}
+
     solvePostfix(postfix) {
         console.log('::solvePostfix | ', postfix);
 
@@ -110,18 +116,19 @@ export class CalculatorScientificPage implements OnInit {
                 resultStack.push(postfix[i]);
             } else {
                 var a = resultStack.pop();
-                var b = resultStack.pop();
+				var b = resultStack.pop();
+
                 if (postfix[i] === '+') {
-                    resultStack.push(parseFloat(a) + parseFloat(b));
+                    resultStack.push(this.convertToFloat(a) + this.convertToFloat(b));
                 } else if (postfix[i] === '-') {
-                    resultStack.push(parseFloat(b) - parseFloat(a));
+                    resultStack.push(this.convertToFloat(b) - this.convertToFloat(a));
                 } else if (postfix[i] === '*') {
-                    resultStack.push(parseFloat(a) * parseFloat(b));
+                    resultStack.push(this.convertToFloat(a) * this.convertToFloat(b));
                 } else if (postfix[i] === '/') {
-                    resultStack.push(parseFloat(b) / parseFloat(a));
+                    resultStack.push(this.convertToFloat(b) / this.convertToFloat(a));
                 } else if (postfix[i] === '^') {
-                    resultStack.push(Math.pow(parseFloat(b), parseFloat(a)));
-                }
+                    resultStack.push(Math.pow(this.convertToFloat(b), this.convertToFloat(a)));
+				}
             }
         }
 
@@ -160,6 +167,9 @@ export class CalculatorScientificPage implements OnInit {
         this.operatorStack = [];
     }
 
+	evaluate() {
+		this.expression = math.eval(this.expression);
+	}
     add(value) {
 		console.log('::add | ', value);
 
@@ -174,6 +184,6 @@ export class CalculatorScientificPage implements OnInit {
         }
 
         console.log('::add | ', this.expression);
-    }
+	}
 }
 
