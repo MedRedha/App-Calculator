@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Rechner 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="calculator">
+      <div class="calculator_display">
+        <ion-input type="text" placeholder="0" name="display" [(ngModel)]="result"></ion-input>
+      </div>
+
+      <div class="calculator_keys">
+        <button (click)="btnClicked('+')" class="key_operator">+</button>
+        <button (click)="btnClicked('-')" class="key_operator">-</button>
+        <button (click)="btnClicked('*')" class="key_operator">&times;</button>
+        <button (click)="btnClicked('/')" class="key_operator">÷</button>
+        <button (click)="btnClicked('7')">7</button>
+        <button (click)="btnClicked('8')">8</button>
+        <button (click)="btnClicked('9')">9</button>
+        <button (click)="btnClicked('4')">4</button>
+        <button (click)="btnClicked('5')">5</button>
+        <button (click)="btnClicked('6')">6</button>
+        <button (click)="btnClicked('1')">1</button>
+        <button (click)="btnClicked('2')">2</button>
+        <button (click)="btnClicked('3')">3</button>
+        <button (click)="btnClicked('0')">0</button>
+        <button (click)="btnClicked('.')">.</button>
+        <button (click)="btnClicked('AC')">AC</button>
+        <button (click)="btnClicked('=')" class="key_equal" data-action="calculate">=</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

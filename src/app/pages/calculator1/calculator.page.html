@@ -1,0 +1,66 @@
+<ion-header>
+	<ion-toolbar>
+	  <ion-buttons slot="start">
+		<ion-menu-button></ion-menu-button>
+	  </ion-buttons>
+	  <ion-title>
+		Rechner 1
+	  </ion-title>
+	</ion-toolbar>
+  </ion-header>
+
+<ion-content>
+	<div class="calculator">
+		<div class="header">
+			<div class="window">
+			</div>
+			<div class="input">
+				<span>
+					<ion-input type="text" placeholder="0" name="display" [(ngModel)]="result"></ion-input>
+				</span>
+			</div>
+		</div>
+		<div class="keys">
+			<div class="row">
+				<div class="number">
+					<span (click)="btnClicked('7')">7</span>
+					<span (click)="btnClicked('8')">8</span>
+					<span (click)="btnClicked('9')">9</span>
+				</div>
+				<div class="symbol">
+					<span (click)="btnClicked('%')">%</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="number">
+					<span (click)="btnClicked('4')">4</span>
+					<span (click)="btnClicked('5')">5</span>
+					<span (click)="btnClicked('6')">6</span>
+				</div>
+				<div class="symbol">
+					<span (click)="btnClicked('-')">-</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="number">
+					<span (click)="btnClicked('1')">1</span>
+					<span (click)="btnClicked('2')">2</span>
+					<span (click)="btnClicked('3')">3</span>
+				</div>
+				<div class="symbol">
+					<span (click)="btnClicked('+')">+</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="number">
+					<span class=dull (click)="btnClicked('C')">C</span>
+					<span (click)="btnClicked('0')">0</span>
+					<span (click)="btnClicked(',')">,</span>
+				</div>
+				<div class="symbol action">
+					<span (click)="btnClicked('=')">=</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-content>

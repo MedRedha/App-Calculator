@@ -1,0 +1,47 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>
+			Rechner mit Postfix-Berechnung
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="calculator">
+
+		<input type="text" class="calculator-screen" value="0" disabled [(ngModel)]="expression">
+
+		<div class="calculator-keys">
+
+			<button type="button" (click)="add('+')" class="operator" value="+">+</button>
+			<button type="button" (click)="add('-')" class="operator" value="-">-</button>
+			<button type="button" (click)="add('*')" class="operator" value="*">&times;</button>
+			<button type="button" (click)="add('/')" class="operator" value="/">&divide;</button>
+
+			<button type="button" (click)="add(7)" value="7">7</button>
+			<button type="button" (click)="add(8)" value="8">8</button>
+			<button type="button" (click)="add(9)" value="9">9</button>
+
+
+			<button type="button" (click)="add(4)" value="4">4</button>
+			<button type="button" (click)="add(5)" value="5">5</button>
+			<button type="button" (click)="add(6)" value="6">6</button>
+
+
+			<button type="button" (click)="add(1)" value="1">1</button>
+			<button type="button" (click)="add(2)" value="2">2</button>
+			<button type="button" (click)="add(3)" value="3">3</button>
+
+
+			<button type="button" (click)="add(0)" value="0">0</button>
+			<button type="button" (click)="add('.')" class="decimal" value=".">.</button>
+			<button type="button" (click)="clear()" class="all-clear" value="all-clear">AC</button>
+
+			<button type="button" (click)="calculate(expression)" class="equal-sign" value="=">=</button>
+
+		</div>
+	</div>
+</ion-content>

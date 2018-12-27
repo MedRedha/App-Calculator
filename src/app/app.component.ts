@@ -1,45 +1,34 @@
-import { Component, ViewChild } from "@angular/core";
-import { Nav, Platform } from "ionic-angular";
-import { StatusBar } from "@ionic-native/status-bar";
-import { SplashScreen } from "@ionic-native/splash-screen";
+import { Component } from '@angular/core';
+
+import { Platform } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
-	templateUrl: "app.html"
+  selector: 'app-root',
+  templateUrl: 'app.component.html'
 })
-export class MainApp {
-	@ViewChild(Nav) nav: Nav;
+export class AppComponent {
+  public appPages = [
+    { title: 'Rechner 1', url: '/calculator1', icon: 'list' },
+    { title: 'Rechner 2', url: '/calculator2', icon: 'list' },
+    { title: 'Rechner 5', url: '/calculator5', icon: 'list' },
+    { title: 'Rechner Postfix', url: '/calculator-postfix', icon: 'calc' },
+    { title: 'Rechner Wissenschaftlich', url: '/calculator-scientific', icon: 'list' }
+  ];
 
-	rootPage: any = "Calculator1Page";
+  constructor(
+    private platform: Platform,
+    private splashScreen: SplashScreen,
+    private statusBar: StatusBar
+  ) {
+    this.initializeApp();
+  }
 
-	pages: Array<{ title: string; component: any }>;
-
-	constructor(
-		public platform: Platform,
-		public statusBar: StatusBar,
-		public splashScreen: SplashScreen
-	) {
-		this.initializeApp();
-
-		this.pages = [
-			{ title: "Calculator 1", component: "Calculator1Page" },
-			{ title: "Calculator 2", component: "Calculator2Page" },
-			{ title: "Calculator 3", component: "Calculator3Page" },
-			{ title: "Calculator 4", component: "Calculator4Page" },
-			{ title: "Calculator 5", component: "Calculator5Page" },
-			{ title: "Calculator 6", component: "Calculator6Page" },
-			{ title: "List", component: "ListPage" },
-			{ title: "Scientific", component: "CalculatorScientificPage" },
-		];
-	}
-
-	initializeApp() {
-		this.platform.ready().then(() => {
-			this.statusBar.styleDefault();
-			this.splashScreen.hide();
-		});
-	}
-
-	openPage(page) {
-		this.nav.setRoot(page.component);
-	}
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
+  }
 }
