@@ -7,7 +7,7 @@ This means:
 - working with typescript to handle the evaluation 
 
 
-Basic Calculator | Postfix Calculator | Scientifiy Calculator
+Basic Calculator | Postfix Calculator | Scientific
 ---------------- | ------------------ | ---------------------
 ![Basic Calculator](images/basic.png) | ![Calculator with Postfix](images/postfix.png) | ![Scientific Calculator](images/scientific.png)
 
