@@ -7,7 +7,7 @@ This means:
 - working with typescript to handle the evaluation 
 
 
-![Basic Calculator](http://github.com/ionic4-toolbox/App-Calculator/blob/master/images/basic.png)
+![Basic Calculator](images/basic.png)
 ![Calculator with Postfix](http://github.com/ionic4-toolbox/App-Calculator/blob/master/images/postfix.png)
 ![Scientific Calculator](http://github.com/ionic4-toolbox/App-Calculator/blob/master/images/scientific.png)
 
