@@ -95,7 +95,7 @@ export class CalculatorScientificPage implements OnInit {
             this.outputQueue += this.operatorStack.pop() + ' ';
         }
 
-        console.log('::infixToPostfix | ', this.outputQueue);
+        console.log('::infixToPostfix | outputQueue = ', this.outputQueue);
 
         return this.outputQueue;
     }
@@ -112,15 +112,15 @@ export class CalculatorScientificPage implements OnInit {
                 var a = resultStack.pop();
                 var b = resultStack.pop();
                 if (postfix[i] === '+') {
-                    resultStack.push(parseInt(a) + parseInt(b));
+                    resultStack.push(parseFloat(a) + parseFloat(b));
                 } else if (postfix[i] === '-') {
-                    resultStack.push(parseInt(b) - parseInt(a));
+                    resultStack.push(parseFloat(b) - parseFloat(a));
                 } else if (postfix[i] === '*') {
-                    resultStack.push(parseInt(a) * parseInt(b));
+                    resultStack.push(parseFloat(a) * parseFloat(b));
                 } else if (postfix[i] === '/') {
-                    resultStack.push(parseInt(b) / parseInt(a));
+                    resultStack.push(parseFloat(b) / parseFloat(a));
                 } else if (postfix[i] === '^') {
-                    resultStack.push(Math.pow(parseInt(b), parseInt(a)));
+                    resultStack.push(Math.pow(parseFloat(b), parseFloat(a)));
                 }
             }
         }
@@ -161,7 +161,12 @@ export class CalculatorScientificPage implements OnInit {
     }
 
     add(value) {
-        console.log('::add | ', value);
+		console.log('::add | ', value);
+
+		if (value == 'PI') {
+			value = Math.PI;
+		}
+
         if (this.expression === '' || this.expression === undefined) {
             this.expression = value;
         } else {

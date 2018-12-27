@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-calculator1',
-  templateUrl: './calculator.page.html',
-  styleUrls: ['./calculator.page.scss'],
+	selector: 'app-calculator1',
+	templateUrl: './calculator.page.html',
+	styleUrls: ['./calculator.page.scss'],
 })
-export class Calculator1Page implements OnInit {
+export class CalculatorPage implements OnInit {
 
-  result = "";
+	result = "";
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
-  btnClicked(btn) {
-		console.log('Calculator1Page::btnClicked = ' + btn);
+	btnClicked(btn) {
+		console.log('CalculatorPage::btnClicked = ' + btn);
 		if (btn == "C") {
 			this.result = "";
 		} else if (btn == "=") {

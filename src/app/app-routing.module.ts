@@ -7,8 +7,8 @@ const routes: Routes = [
     redirectTo: 'calculator-basic',
     pathMatch: 'full'
   },
-  { path: 'calculator-basic', loadChildren: './pages/calculator-basic/calculator.module#Calculator1PageModule' },
-  { path: 'calculator-postfix', loadChildren: './pages/calculator-postfix/calculator.module#Calculator6PageModule' },
+  { path: 'calculator-basic', loadChildren: './pages/calculator-basic/calculator.module#CalculatorPageModule' },
+  { path: 'calculator-postfix', loadChildren: './pages/calculator-postfix/calculator.module#CalculatorPostfixPageModule' },
   { path: 'calculator-scientific', loadChildren: './pages/calculator-scientific/calculator-scientific.module#CalculatorScientificPageModule' }
 ];
 

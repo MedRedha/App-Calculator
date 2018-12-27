@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './calculator.page.html',
     styleUrls: ['./calculator.page.scss'],
 })
-export class Calculator6Page implements OnInit {
+export class CalculatorPostfixPage implements OnInit {
 
     outputQueue = '';
     operatorStack = [];
