@@ -168,9 +168,10 @@ export class CalculatorScientificPage implements OnInit {
     }
 
 	evaluate() {
-		this.expression = math.eval(this.expression);
+		this.expression = math.format(math.eval(this.expression), {precision: 14});
 	}
-    add(value) {
+
+	add(value) {
 		console.log('::add | ', value);
 
 		if (value == 'PI') {
@@ -180,7 +181,7 @@ export class CalculatorScientificPage implements OnInit {
         if (this.expression === '' || this.expression === undefined) {
             this.expression = value;
         } else {
-            this.expression = this.expression + ' ' + value;
+            this.expression = this.expression + value;
         }
 
         console.log('::add | ', this.expression);
