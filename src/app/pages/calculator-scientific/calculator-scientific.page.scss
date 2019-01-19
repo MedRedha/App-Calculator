@@ -20,7 +20,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 95%;
   }
 
   .calculator-screen {
@@ -36,7 +36,8 @@ html {
   }
 
   button {
-    height: 60px;
+	height: 60px;
+	width: 60px;
     background-color: #fff;
     border-radius: 3px;
     border: 1px solid #c4c4c4;

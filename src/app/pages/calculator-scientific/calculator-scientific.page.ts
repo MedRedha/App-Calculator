@@ -174,6 +174,8 @@ export class CalculatorScientificPage implements OnInit {
 	add(value: string) {
 		console.log('CalculatorScientificPage::add | value=', value);
 
+		const noexpression = (this.expression === '' || this.expression === undefined) ? true : false;
+
         if (this.expression === '' || this.expression === undefined) {
             this.expression = String(value);
         } else {
@@ -183,5 +185,20 @@ export class CalculatorScientificPage implements OnInit {
 
         console.log('CalculatorScientificPage::add | expression=', this.expression);
 	}
+
+	addFunction(value: string) {
+		console.log('CalculatorScientificPage::add | value=', value);
+
+		const noexpression = (this.expression === '' || this.expression === undefined) ? true : false;
+
+        if (!noexpression) {
+			this.expression=value + '(' + this.expression + ')';
+			console.log('CalculatorScientificPage::add | evaluate ', this.expression);
+			this.evaluate();
+        }
+
+        console.log('CalculatorScientificPage::add | expression=', this.expression);
+	}
+
 }
 
