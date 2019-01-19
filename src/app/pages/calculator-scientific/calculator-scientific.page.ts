@@ -43,7 +43,7 @@ export class CalculatorScientificPage implements OnInit {
     }
 
     ionViewDidLoad() {
-        console.log('ionViewDidLoad Calculator6Page');
+        console.log('CalculatorScientificPage::ionViewDidLoad |');
     }
 
     isNumeric(value) {
@@ -60,7 +60,7 @@ export class CalculatorScientificPage implements OnInit {
     }
 
     infixToPostfix(infix) {
-        console.log('::infixToPostfix | ', infix);
+        console.log('CalculatorScientificPage::infixToPostfix | ', infix);
 
         infix = infix.replace(/\s+/g, '');
         infix = infix.split(/([\+\-\*\/\^\(\)])/);
@@ -97,7 +97,7 @@ export class CalculatorScientificPage implements OnInit {
             this.outputQueue += this.operatorStack.pop() + ' ';
         }
 
-        console.log('::infixToPostfix | outputQueue = ', this.outputQueue);
+        console.log('CalculatorScientificPage::infixToPostfix | outputQueue = ', this.outputQueue);
 
         return this.outputQueue;
     }
@@ -107,7 +107,7 @@ export class CalculatorScientificPage implements OnInit {
 	}
 
     solvePostfix(postfix) {
-        console.log('::solvePostfix | ', postfix);
+        console.log('CalculatorScientificPage::solvePostfix | ', postfix);
 
         var resultStack = [];
         postfix = postfix.split(' ');
@@ -140,7 +140,7 @@ export class CalculatorScientificPage implements OnInit {
             result = resultStack.pop();
         }
 
-        console.log('::solvePostfix | ', result);
+        console.log('CalculatorScientificPage::solvePostfix | ', result);
 
         return result;
     }
@@ -150,18 +150,18 @@ export class CalculatorScientificPage implements OnInit {
         this.outputQueue = '';
         this.operatorStack = [];
 
-        console.log('::clear | ', this.expression);
+        console.log('CalculatorScientificPage::clear | ', this.expression);
     }
 
     calculate() {
-        console.log('::calculate | expresion = ', this.expression);
+        console.log('CalculatorScientificPage::calculate | expression = ', this.expression);
 
         var postfix = this.infixToPostfix(this.expression);
-        console.log('::calculate | postfix = ', postfix);
+        console.log('CalculatorScientificPage::calculate | postfix = ', postfix);
 
         this.expression = this.solvePostfix(postfix.trim());
 
-        console.log('::calculate | expression = ', this.expression);
+        console.log('CalculatorScientificPage::calculate | expression = ', this.expression);
 
         this.outputQueue = '';
         this.operatorStack = [];
@@ -171,20 +171,17 @@ export class CalculatorScientificPage implements OnInit {
 		this.expression = math.format(math.eval(this.expression), {precision: 14});
 	}
 
-	add(value) {
-		console.log('::add | ', value);
-
-		if (value == 'PI') {
-			value = Math.PI;
-		}
+	add(value: string) {
+		console.log('CalculatorScientificPage::add | value=', value);
 
         if (this.expression === '' || this.expression === undefined) {
-            this.expression = value;
+            this.expression = String(value);
         } else {
-            this.expression = this.expression + value;
+			console.log('CalculatorScientificPage::add | add value ', value);
+            this.expression = this.expression.concat(value);
         }
 
-        console.log('::add | ', this.expression);
+        console.log('CalculatorScientificPage::add | expression=', this.expression);
 	}
 }
 
